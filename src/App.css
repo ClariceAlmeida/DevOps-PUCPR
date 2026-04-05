@@ -1,56 +1,15 @@
-.App{
-    box-sizing: border-box;
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+    font-weight: bold;
+    font-size: 50px;
+}
+.App1{
     display: flex;
     flex-direction: column;
     height: 100vh;
-}
-
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #d0d0d0;
-    cursor: pointer;
-    transition: 0.2s;
-    font-size: 2rem;
-}
-
-.button:hover{
-    background-color: #d0d0d0f1;
-}
-
-.tela{
-    padding: 1.5rem;
-    background-color: #636463;
-    color: #d0d0d0;
-    height: 20%;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 4.5rem;
-}
-
-.corpo{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    height: 80%;
-}
-
-.span3{
-    grid-column: span 3;
-}
-
-.span2{
-    grid-column: span 2;
-}
-
-.laranja{
-    background-color: #f98131;
-    color: #d0d0d0;
-}
-
-.laranja:hover{
-    background-color: #f98131f1;
+    width: 80vw;
+    margin: auto;
+    justify-content: space-evenly;
 }

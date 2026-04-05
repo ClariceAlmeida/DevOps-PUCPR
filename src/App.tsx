@@ -1,53 +1,34 @@
 import { useState } from 'react'
 import './App.css'
-import Button from './components/Button.tsx'
 
 function App() {
-  const [value, setValue] = useState(0)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-  function handleAdd() {
-    setValue(value + 1)
+  const confirmedData = {
+    email: 'eduardo.lino@pucpr.br',
+    password: '123456'
   }
 
-  function handleSubtract() {
-    setValue(value - 1)
+  function handleLogin() {
+    console.log(email, password)
+    const msg = document.getElementById('msg')
+    if (!msg) return
+    if (email === confirmedData.email && password === confirmedData.password) {
+      msg.textContent = 'Acessado com sucesso!'
+    } else {
+      msg.textContent = 'Usuário ou senha incorretos!'
+    }
   }
-
 
   return (
-    // <div className="App">
-    //   <div className="tela">
-    //     0.75
-    //   </div>
-    //   <div className="corpo">
-    //       <Button element='AC' className="span3" />
-    //       <Button element='/' className="laranja" />
-    //       <Button element='7' />
-    //       <Button element='8' />
-    //       <Button element='9' />
-    //       <Button element='*' className="laranja" />
-    //       <Button element='4' />
-    //       <Button element='5' />
-    //       <Button element='6' />
-    //       <Button element='-' className="laranja" />
-    //       <Button element='1' />
-    //       <Button element='2' />
-    //       <Button element='3' />
-    //       <Button element='+' className="laranja"     />
-    //       <Button element='0' className="span2" /> 
-    //       <Button element='.' />
-    //       <Button element='=' className="laranja" />
-    //   </div>
-    // </div>
-
-    <div className="App">
-      <div className="tela">
-        {value}
-      </div>
-      <Button element='+ 1' className="span3" onClick={handleAdd} />
-      <Button element='- 1' className="span3" onClick={handleSubtract} />
+    <div className="App1">
+      <h1>Login</h1>
+      <input type="email" placeholder="Email" name='email' onChange={(e) => setEmail(e.target.value)}/>
+      <input type="password" placeholder="Password" name='password' onChange={(e) => setPassword(e.target.value)}/>
+      <button onClick={handleLogin}>Acessar</button>
+      <p id='msg'></p>
     </div>
-
   )
 }
 
