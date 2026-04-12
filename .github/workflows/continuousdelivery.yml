@@ -32,3 +32,13 @@ jobs:
         with:
           name: build
           path: dist
+  deploy:
+    needs: deliver
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: build-deployment
+      - name: Display structure of downloaded files
+        run: ls -R 
