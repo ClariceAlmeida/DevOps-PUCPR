@@ -22,7 +22,7 @@ function App() {
   }
 
   return (
-    <div className="App1">
+    <div className="app1">
       <h1>Login</h1>
       <input type="email" placeholder="Email" name='email' onChange={(e) => setEmail(e.target.value)}/>
       <input type="password" placeholder="Password" name='password' onChange={(e) => setPassword(e.target.value)}/>
@@ -33,3 +33,5 @@ function App() {
 }
 
 export default App
+
+
