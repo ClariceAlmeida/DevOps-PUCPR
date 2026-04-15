@@ -73,10 +73,10 @@ jobs:
         run: npx commitlint --from origin/${{ github.base_ref }} --to HEAD --verbose
 
   docker:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Set up QEMU
-      uses: docker/setup-qemu-action@v4
-      
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v4
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v4
+        
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
