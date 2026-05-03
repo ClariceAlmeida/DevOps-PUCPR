@@ -2,7 +2,6 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { vi, describe, test, expect, beforeEach } from 'vitest'
 import Login from '../pages/Login'
-import firebase from '../Firebase'
 
 // 1. Criamos a função mockada fora para termos controle total
 const signInMock = vi.fn();
