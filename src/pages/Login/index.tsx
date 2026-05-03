@@ -29,6 +29,7 @@ function Login() {
 
         } catch (error: any) {
         console.error("Erro no login:", error);
+        alert("Se cadastre.");
 
         if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password' || error.code === 'auth/invalid-credential') {
             alert("E-mail ou senha incorretos.");
@@ -37,6 +38,7 @@ function Login() {
         } else {
             alert("Erro ao acessar: " + error.message);
         }
+        navigate("/cadastro")
         }
     }
 
