@@ -1,0 +1,70 @@
+.notfound-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.notfound-content {
+  max-width: 500px;
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.notfound-code {
+  font-size: 8rem;
+  margin: 0;
+  background: linear-gradient(45deg, #3a7bd5, #00d2ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.notfound-title {
+  color: #333;
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.notfound-text {
+  color: #666;
+  margin: 20px 0 30px;
+  line-height: 1.6;
+}
+
+.notfound-button {
+  background: #3a7bd5;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.notfound-button:hover {
+  background: #00d2ff;
+  transform: translateY(-2px);
+}
+
+/* Animação simples para o ícone */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.notfound-icon {
+  font-size: 3rem;
+  color: #3a7bd5;
+  animation: float 3s ease-in-out infinite;
+}

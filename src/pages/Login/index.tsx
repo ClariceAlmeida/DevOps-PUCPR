@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import './Login.css'
 import firebase from '../../Firebase'
+import { useNavigate } from 'react-router-dom'
 
 function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const navigate = useNavigate()
 
     function handleNewRegistry(){
-        window.location.href = "/cadastro"
+        navigate("/cadastro")
     }
 
 
@@ -23,7 +25,7 @@ function Login() {
             await firebase.auth().signInWithEmailAndPassword(email, password)
 
             // feedback para o usuário aqui
-            window.location.href = "/home"
+            navigate("/home")
 
         } catch (error: any) {
         console.error("Erro no login:", error);
